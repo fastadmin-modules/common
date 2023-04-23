@@ -1,5 +1,5 @@
-# fa-addon-slide
-fastadmin之slide插件
+# fastadmin之幻灯slide插件
+
 
 ## 一：把自己的写的代码做成单独包
 例如：幻灯是 `slide` 我们就把文件夹改变 `slide`
