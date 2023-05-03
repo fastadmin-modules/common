@@ -1,5 +1,16 @@
 # fastadmin之幻灯slide插件
 
+## 快速使用
+```
+cd fastadmin/addons & 
+git clone https://github.com/sxqibo/fastadmin-addon-slide slide & 
+php think addon -a slide -c package & 
+rm -rf slide
+
+安装时到 runtime/addons/slide-1.0.0.zip
+```
+
+
 
 ## 一：把自己的写的代码做成单独包
 例如：幻灯是 `slide` 我们就把文件夹改变 `slide`
