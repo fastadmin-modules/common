@@ -2,10 +2,11 @@
 
 ## 快速使用
 ```
-cd fastadmin/addons & 
-git clone https://github.com/sxqibo/fastadmin-addon-slide slide & 
-php think addon -a slide -c package & 
-rm -rf slide
+cd addons &&
+git clone https://github.com/sxqibo/fastadmin-addon-slide slide && 
+php think addon -a slide -c package &&
+cd .. &&
+rm -rf addons/slide
 
 安装时到 runtime/addons/slide-1.0.0.zip
 ```
