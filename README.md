@@ -3,12 +3,12 @@
 ## 快速使用
 ```
 cd addons && 
-git clone https://github.com/sxqibo/https://github.com/sxqibo/fastadmin-addon-common_problem problem &&
+git clone https://github.com/sxqibo/fastadmin-addon-common common &&
 cd .. &&
-php think addon -a problem -c package &&
-rm -rf addons/problem
+php think addon -a common -c package &&
+rm -rf addons/common
 
-安装时到 runtime/addons/problem-1.0.0.zip
+安装时到 runtime/addons/common-1.0.0.zip
 ```
 
 ## 一：简要介绍
@@ -44,8 +44,23 @@ rm -rf addons/problem
 
 * 惠赚点
 * 洞藏酒
-* 
+
+
 ## 五：相关图片
+#### 公共管理 - 文章表
+
+#### 公共管理 - 意见反馈
+
 ![列表图片](https://addons-platform.oss-cn-beijing.aliyuncs.com/modules/problems/1.png)
 
 ![修改图](https://addons-platform.oss-cn-beijing.aliyuncs.com/modules/problems/1.png)
+
+#### 公共管理 - 常见问题
+
+#### 公共管理 - 轮播图管理
+
+#### 公共管理 - 视频管理
+
+##### 公共管理 - 视频分类表
+
+
