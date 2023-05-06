@@ -7,9 +7,9 @@ git clone https://github.com/sxqibo/fastadmin-addon-common common &&
 cd .. &&
 php think addon -a common -c package &&
 rm -rf addons/common
+```
 
 安装时到 runtime/addons/common-1.0.0.zip
-```
 
 ## 一：简要介绍
 在程序中一般会有常见问题，我们只需要在程序中简单显示即可！
