@@ -1,6 +1,6 @@
 <?php
 
-namespace addons\slide;
+namespace addons\common;
 
 use app\common\library\Menu;
 use think\Addons;
@@ -19,7 +19,7 @@ class Common extends Addons
     public function install()
     {
         $menu = [[
-            'name' => 'distribution',
+            'name' => 'common',
             'title' => '公共管理',
             'icon' => 'fa fa-creative-commons',
             'sublist' => [
@@ -42,7 +42,7 @@ class Common extends Addons
      */
     public function uninstall()
     {
-        Menu::delete("slide");
+        Menu::delete("common");
         Service::refresh();
         return true;
     }
