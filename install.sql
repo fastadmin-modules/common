@@ -1,7 +1,7 @@
 -- ----------------------------
 -- 公共管理 - 文章
 -- ----------------------------
-CREATE TABLE `fzw_common_article`
+CREATE TABLE `__PREFIX__common_article`
 (
     `id`           int(11) NOT NULL AUTO_INCREMENT,
     `name`         varchar(100) NOT NULL DEFAULT '' COMMENT '变量名',
@@ -17,13 +17,13 @@ CREATE TABLE `fzw_common_article`
     UNIQUE KEY `name` (`name`) USING BTREE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC COMMENT='公共管理 - 文章表';
 
-INSERT INTO `fzw_common_article` (`name`, `title`, `author`, `desc`, `content`, `publish_time`, `create_time`, `update_time`, `delete_time`)
+INSERT INTO `__PREFIX__common_article` (`name`, `title`, `author`, `desc`, `content`, `publish_time`, `create_time`, `update_time`, `delete_time`)
 VALUES ( 'about', '关于我们', '作者', '关于我们', '关于我们的内容', 1626260641, 1626260641, 1640594395, NULL);
 
 -- ----------------------------
 -- 公共管理 - 意见反馈
 -- ----------------------------
-CREATE TABLE `fzw_common_opinion`
+CREATE TABLE `__PREFIX__common_opinion`
 (
     `id`          int(11) NOT NULL AUTO_INCREMENT,
     `user_id`     int(11) NOT NULL DEFAULT '0' COMMENT '用户ID',
@@ -35,15 +35,14 @@ CREATE TABLE `fzw_common_opinion`
     PRIMARY KEY (`id`) USING BTREE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC COMMENT='公共管理 - 意见反馈';
 
-INSERT INTO `fzw_common_opinion` ( `user_id`, `images`, `content`, `create_time`, `update_time`, `delete_time`)
+INSERT INTO `__PREFIX__common_opinion` ( `user_id`, `images`, `content`, `create_time`, `update_time`, `delete_time`)
 VALUES (1,'https://fenzhouwang2021.oss-cn-shanghai.aliyuncs.com//uploads/20220109/ff60f103809a266bb437b24841ff8f0e.jpg', '碎了一个，怎么处理', 1641721987, 1649404039, 1649404039);
 
 
 -- ----------------------------
--- Table structure for fzw_common_problem
+-- Table structure for __PREFIX__common_problem
 -- ----------------------------
-DROP TABLE IF EXISTS `fzw_common_problem`;
-CREATE TABLE `fzw_common_problem`
+CREATE TABLE `__PREFIX__common_problem`
 (
     `id`          int(11) NOT NULL AUTO_INCREMENT,
     `title`       varchar(255) NOT NULL DEFAULT '' COMMENT '问题名称',
@@ -54,14 +53,13 @@ CREATE TABLE `fzw_common_problem`
     PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COMMENT='公共管理 - 常见问题';
 
-INSERT INTO `fzw_common_problem` (`title`, `description`, `create_time`, `update_time`, `delete_time`)
+INSERT INTO `__PREFIX__common_problem` (`title`, `description`, `create_time`, `update_time`, `delete_time`)
 VALUES ('地图定位不准', '<p>你好，打开小程序点击右上角【...】-【重新进入小程序】即可定位到您所在的正确位置。</p>', 1640592856,  1640592856, NULL);
 
 -- ----------------------------
 -- 公共管理 - 轮播图管理
 -- ----------------------------
-DROP TABLE IF EXISTS `fzw_common_slide`;
-CREATE TABLE `fzw_common_slide`
+CREATE TABLE `__PREFIX__common_slide`
 (
     `id`          int(11) NOT NULL AUTO_INCREMENT,
     `title`       varchar(30)  NOT NULL DEFAULT '' COMMENT '标题',
@@ -75,15 +73,14 @@ CREATE TABLE `fzw_common_slide`
     PRIMARY KEY (`id`) USING BTREE
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC COMMENT='公共管理 - 轮播图管理';
 
-INSERT INTO `fzw_common_slide` (`title`, `image`, `link`, `status`, `weigh`, `create_time`, `update_time`,  `delete_time`)
+INSERT INTO `__PREFIX__common_slide` (`title`, `image`, `link`, `status`, `weigh`, `create_time`, `update_time`,  `delete_time`)
 VALUES ('轮播图2','https://fenzhouwang.oss-cn-hangzhou.aliyuncs.com/uploads/20211229/6f247f85d5eb2bf215ed1675975ecc18.png', '', '1', 2, 1640770893, 1640770924, 1640770924);
 
 
 -- ----------------------------
 -- 公共管理 - 视频管理
 -- ----------------------------
-DROP TABLE IF EXISTS `fzw_common_video`;
-CREATE TABLE `fzw_common_video`
+CREATE TABLE `__PREFIX__common_video`
 (
     `id`          int(11) NOT NULL AUTO_INCREMENT,
     `title`       varchar(255) NOT NULL DEFAULT '' COMMENT '标题',
@@ -105,14 +102,14 @@ CREATE TABLE `fzw_common_video`
     KEY           `category_id` (`category_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8 COMMENT='公共管理 - 视频管理';
 
-INSERT INTO `fzw_common_video` (`title`, `image`, `type`, `url`, `view_num`, `intro`, `desc`, `status`,`file_name`, `file_size`, `creator_id`, `create_time`, `update_time`, `delete_time`, `category_id`)
+INSERT INTO `__PREFIX__common_video` (`title`, `image`, `type`, `url`, `view_num`, `intro`, `desc`, `status`,`file_name`, `file_size`, `creator_id`, `create_time`, `update_time`, `delete_time`, `category_id`)
 VALUES ('汾州王酒定乾坤', '/uploads/20211208/499d3b4748a9d662480710d7360f38ad.jpg', 2, '/uploads/20220224/6e9076279e61ceea9d6260d321679135.mp4', 628, '', '', 1, '', '', 0, 1645671595, 1645672617,  NULL, 1);
 
 -- ----------------------------
 -- 公共管理 - 视频分类表
 -- ----------------------------
-DROP TABLE IF EXISTS `fzw_common_video_category`;
-CREATE TABLE `fzw_common_video_category`
+DROP TABLE IF EXISTS `__PREFIX__common_video_category`;
+CREATE TABLE `__PREFIX__common_video_category`
 (
     `id`          int(11) NOT NULL AUTO_INCREMENT,
     `name`        varchar(255) NOT NULL DEFAULT '' COMMENT '标题',
@@ -125,7 +122,6 @@ CREATE TABLE `fzw_common_video_category`
     PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COMMENT='公共管理 - 视频分类表';
 
-BEGIN;
-INSERT INTO `fzw_common_video_category` (`name`, `pid`, `desc`, `status`, `create_time`, `update_time`, `delete_time`)
+INSERT INTO `__PREFIX__common_video_category` (`name`, `pid`, `desc`, `status`, `create_time`, `update_time`, `delete_time`)
 VALUES ('分类标题', 0, '分类介绍', 1, 1645670602, 1646017039, NULL);
 
