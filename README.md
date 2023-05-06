@@ -1,39 +1,51 @@
-# fastadmin之幻灯slide插件
+# fastadmin之幻灯通用插件
 
 ## 快速使用
 ```
-cd addons &&
-git clone https://github.com/sxqibo/fastadmin-addon-slide slide && 
-php think addon -a slide -c package &&
+cd addons && 
+git clone https://github.com/sxqibo/https://github.com/sxqibo/fastadmin-addon-common_problem problem &&
 cd .. &&
-rm -rf addons/slide
+php think addon -a problem -c package &&
+rm -rf addons/problem
 
-安装时到 runtime/addons/slide-1.0.0.zip
+安装时到 runtime/addons/problem-1.0.0.zip
+```
+
+## 一：简要介绍
+在程序中一般会有常见问题，我们只需要在程序中简单显示即可！
+插件包括以下内容：
+* 公共管理 - 文章表
+* 公共管理 - 意见反馈
+* 公共管理 - 常见问题
+* 公共管理 - 轮播图管理
+* 公共管理 - 视频管理
+* 公共管理 - 视频分类表
+
+## 二：接口文档
+待定
+
+## 三：小程序
+目录下的 `weixin` 文件夹是小程序的使用目录！
+在 `app.json` 中引入文件，下边的注释是文档中所用，实际要去掉
+```
+{
+  "pages": [
+    "pages/textDetail/textDetail",
+    "pages/extension/extension", // 分销页面
+    "pages/extensionList/extensionList", // 分销列表（直推人数，间推人数）
+    "pages/extensionInfo/extensionInfo", // 我的分销业绩
+  ]
+}
 ```
 
 
 
-## 一：把自己的写的代码做成单独包
-例如：幻灯是 `slide` 我们就把文件夹改变 `slide`
+## 四：哪个项目用到模块
 
-## 二：增加一些配置项
-1. 数据库
-2. 安装卸载
+* 惠赚点
+* 洞藏酒
+* 
+## 五：相关图片
+![列表图片](https://addons-platform.oss-cn-beijing.aliyuncs.com/modules/problems/1.png)
 
-## 三：用命令打包
-不能直接把包右键zip，总会报错！
-建议用命令
-```
-php think addon -a slide -c package
-```
-运行完命令到 `runtime/addon` 文件夹会有一个包： `slide-1.0.0.zip`
-
-## 四：使用
-后台使用 `本地上传` 使用，上传时会有一个限制，请到官方进行下载，我们需要修改一条命令：
-位置： `vendor/karsonzhang/fastadmin-addons/src/addons/Service.php`
-
-把下边这行去掉即可
-```
-// 压缩包验证、版本依赖判断
-// Service::valid($params);
-```
+![修改图](https://addons-platform.oss-cn-beijing.aliyuncs.com/modules/problems/1.png)
